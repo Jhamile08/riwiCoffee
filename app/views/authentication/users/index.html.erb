@@ -1,0 +1,11 @@
+<h1>Welcome to riwi</h1>
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+<%= button_to 'Notificar falta de cafe', send_email_path('link1'), method: :post, class: 'btn btn-primary' %>
+<%= button_to 'Notificar falta de agua', send_email_path('link2'), method: :post, class: 'btn btn-secondary' %>
+
+
+</p>
