@@ -1,15 +1,17 @@
 <h1>Registrar Usuario</h1>
 
-<%= form_with(model: @user) do |form| %>
+<%= form_with(model: @user, url: authentication_users_path) do |form| %>
   <% @user.errors.full_messages.each do |error| %>
     <div>
       <%= error %>
     </div>
   <% end %>
+
   <div>
     <%= form.label :user_name %>
-    <%= form.text_field  :user_name %>
+    <%= form.text_field :user_name %>
   </div>
+
   <div>
     <%= form.label :user_email %>
     <%= form.email_field :user_email %>
@@ -21,8 +23,8 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Registrar" %>
   </div>
 <% end %>
 
-<%# <%= link_to "You hace an account?", login_path%> 
+<%= link_to "You hace an account?", new_authentication_session_path %>
