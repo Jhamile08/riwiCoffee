@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: riwi_coffee_production            # Usa variables de entorno directamente aquí
+      MYSQL_ROOT_PASSWORD: 
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 
+    ports:
+      - "3307:3306"                           # Está bien configurado sin coma
+  app:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/rails
+    depends_on:
+      - db

@@ -1,0 +1,9 @@
+                    List of relations
+ Schema |         Name         | Type  |      Owner       
+--------+----------------------+-------+------------------
+ public | ar_internal_metadata | table | riwicofffee_user
+ public | requests             | table | riwicofffee_user
+ public | schema_migrations    | table | riwicofffee_user
+ public | users                | table | riwicofffee_user
+(4 rows)
+
